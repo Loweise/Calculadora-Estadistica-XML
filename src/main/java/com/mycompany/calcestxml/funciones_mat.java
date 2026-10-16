@@ -7,20 +7,17 @@ package com.mycompany.calcestxml;
 import java.util.ArrayList;
 
 /**
- *
- * @author PC LUIS
+ * @author Zahid
  */
 public class funciones_mat {
     
     public static double Media(ArrayList<Double> lista) {
         double media =0;
-        int contador=0;
         
         for (Double aDouble : lista) {
             media = media+aDouble;
-            contador++;
         }
-        media = media/contador;
+        media = media/lista.size();
         return media;
     }
     
@@ -43,7 +40,7 @@ public class funciones_mat {
     public static double varianza(ArrayList<Double> lista){
         double media = Media(lista), x = 0;
         
-        for (Double aDouble : lista) { x = x + Math.pow((aDouble+media), 2); }
+        for (Double aDouble : lista) { x = x + Math.pow((aDouble - media), 2); }
         
         return x/lista.size();
     }
