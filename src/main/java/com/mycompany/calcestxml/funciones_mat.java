@@ -49,4 +49,13 @@ public class funciones_mat {
         return Math.sqrt(varianza(lista));
     }
     
+    public static void calcularTodo(ArrayList<Double> lista) {
+        System.out.println(Media(lista));
+        System.out.println(valorMax(lista));
+        System.out.println(valorMin(lista));
+        System.out.println(varianza(lista));
+        System.out.println(desviacionEstandar(lista));
+        
+    }
+    
 }
